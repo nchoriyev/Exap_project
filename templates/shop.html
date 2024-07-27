@@ -149,8 +149,12 @@
             <div class="row g-4">
                 <div class="col-xl-3">
                     <div class="input-group w-100 mx-auto d-flex">
-                        <input type="search" class="form-control p-3" placeholder="Keywords" aria-describedby="search-icon-1" name="search">
-                        <span id="search-icon-1" class="input-group-text p-3"><i class="fa fa-search"></i></span>
+                        <form class="d-flex" method="POST">
+                            {% csrf_token %}
+                            <input class="form-control me-2" type="search" placeholder="🔍 Search" aria-label="Search" name="search">
+                            <button class="btn btn-outline-success" type="submit">Search</button>
+                        </form>
+>
                     </div>
                 </div>
                 <div class="col-xl-3">

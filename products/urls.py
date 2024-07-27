@@ -1,6 +1,5 @@
 from django.urls import path
 
-import products
 from .views import home, shop, search, shop_detail, update_book, delete_product, feedback, cart, add_to_cart
 
 urlpatterns = [
